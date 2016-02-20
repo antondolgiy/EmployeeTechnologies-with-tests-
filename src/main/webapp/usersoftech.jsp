@@ -18,8 +18,8 @@ USERS,SKILLED IN <strong>${requestScope['TechByID'].techName}</strong>
 <table border="1" cellpadding="2" cellspacing="1" style="width: 800px">
 <c:forEach var="user" items="${requestScope['UsersOfTech']}">
   <tr>
-  <td>${user.userId}</td>
-  <td>${user.userSurname}, ${user.userName}</td>
+  <td name="user-id">${user.userId}</td>
+  <td name="user-name>${user.userSurname}, ${user.userName}</td>
   </tr>
   </c:forEach>
   </table>
