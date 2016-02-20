@@ -20,7 +20,7 @@ public class UITest2 {
         driver.findElement(By.name("addTech")).click();
         int b= driver.findElements(By.name("us1")).size();
         assertEquals(1,(b-a));
-        sleep(2000);
+       
         driver.findElement(By.name("DelTech555")).click();
         int c= driver.findElements(By.name("us1")).size();
         assertEquals(0,(c-a));
