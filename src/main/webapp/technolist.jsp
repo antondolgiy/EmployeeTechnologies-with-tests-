@@ -24,7 +24,7 @@
   </tr>
   <c:forEach var="tec" items="${requestScope['techlist']}">
     <tr>
-      <td>${tec.techId}</td>
+      <td name="us1">${tec.techId}</td>
       <td>${tec.techName}</td>
       <td>${tec.techDescription}</td>
       <td>
