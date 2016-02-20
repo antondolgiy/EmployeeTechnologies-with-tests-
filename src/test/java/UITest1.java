@@ -12,8 +12,11 @@ public class UITest1 {
 
         WebDriver driver = new FirefoxDriver();
         driver.get("http://localhost:8080/getalltech");
+        int a= driver.findElements(By.name("us1")).size();
+        assertEquals(7,a);
         driver.findElement(By.name("TechIDtoFind")).sendKeys("202");
         driver.findElement(By.name("SelectTechID")).click();
+        assertEquals(6,driver.findElements(By.name("user-id")).size());
 
     }
 
