@@ -35,7 +35,7 @@
     <input type="hidden"  value=${us.userId} name="userID">
     <input type="hidden"  value=${us.userName} name="userName">
     <input type="hidden"  value=${us.userSurname} name="userSurname">
-    <td><input type="submit" value="user skills" name="UserSkillsbyID"></td>
+    <td><input type="submit" value="user skills" name="UserSkillsbyID" id="SkillByID${us.userId}"></td>
   </form>
   <form action="UserByID" method="post">
     <input type="hidden"  value=${us.userId} name="userID">

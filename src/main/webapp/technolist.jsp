@@ -43,7 +43,7 @@
 ENTER TECH ID TO SEE USERS,SKILLED IN IT
 <br>
 <form action="/GetUsersByTechID" method="post">
-  <input type="number" name="TechIDtoFind">
+  <input id ="find-id" type="number" name="TechIDtoFind">
   <input type="submit" value="select tech" name="SelectTechID">
 </form>
 
