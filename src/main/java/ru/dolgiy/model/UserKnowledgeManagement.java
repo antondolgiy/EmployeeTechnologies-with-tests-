@@ -10,27 +10,14 @@ import java.util.List;
  * Created by Anton on 01.11.2015.
  */
 public class UserKnowledgeManagement {
-  /*
-    public static void main(String[] args) {
 
-try{
-
-
-
-           //UserKnowledgeManagement.getInstance().addNewUser(1234,"hodor","hodor","hodor",
-             //      Date.valueOf("01.01.1980"), Date.valueOf("01.01.1995"));
-    }
-catch (Exception e){System.out.println(e);}
-
-    }
-    */
 
 
     private static UserKnowledgeManagement instance;
 
     private static Connection connection;
-    //private static UserKnowledgeManagement instance =new UserKnowledgeManagement();
-    public UserKnowledgeManagement()throws Exception{
+   
+    private UserKnowledgeManagement()throws Exception{
         try
         {
             Class.forName("org.postgresql.Driver");

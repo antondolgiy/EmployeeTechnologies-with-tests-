@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <%--
   Created by IntelliJ IDEA.
   User: Anton
@@ -50,3 +51,57 @@
 
 </body>
 </html>
+=======
+<%--
+  Created by IntelliJ IDEA.
+  User: Anton
+  Date: 08.02.2016
+  Time: 20:28
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<h2>Skills of User:${requestScope['username']},${requestScope['usersurname']}</h2>
+<br>
+<table border="1" cellpadding="2" cellspacing="1" style="width: 800px">
+  <c:forEach var="tec" items="${requestScope['usertech']}">
+    <tr>
+      <td name="tech-id" id="id_${tec.techId}">${tec.techId}</td>
+      <td name="tech-name" id="name_${tec.techName}">${tec.techName}</td>
+      <td>
+        <form action="DelUserSkill" method="post">
+          <input type="hidden" value="${tec.techId}" name="tech2delete">
+          <input type="hidden" value="${requestScope['userID']}" name="userID">
+          <input type="hidden" value="${requestScope['username']}" name="userName">
+          <input type="hidden" value="${requestScope['usersurname']}" name="userSurname">
+          <input type="submit" value="delete tech" id="deltech${tec.techId}" name="deltech">
+        </form>
+      </td>
+    </tr>
+  </c:forEach>
+ </table>
+
+
+<br>ADD USER SKILL
+<form action="AddUserSkill">
+  <select name="tech2add">
+    <c:forEach var="ufo" items="${requestScope['unknown']}">
+      <option name="addable" id="addable${ufo.techId}" value="${ufo.techId}"  >${ufo.techName}</option>
+    </c:forEach>
+  </select>
+  <input type="hidden" value="${requestScope['userID']}" name="userID">
+  <input type="hidden" value="${requestScope['username']}" name="userName">
+  <input type="hidden" value="${requestScope['usersurname']}" name="userSurname">
+
+  <input type="submit" value="add selected" name="addtech">
+</form>
+
+</body>
+</html>
+>>>>>>> 8a04b8bb982a1d89dd397d7fefc181eb173653e3
