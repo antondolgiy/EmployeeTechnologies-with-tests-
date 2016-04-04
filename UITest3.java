@@ -20,21 +20,7 @@ import com.codeborne.selenide.Condition.*;
 public class UITest3 {
     @Test
     public void UserCanEditListofEmployeesSkills(){
-        /*
-        WebDriver driver = new FirefoxDriver();
-        driver.get("http://localhost:8080/getallusers");
-        driver.findElement(By.id("SkillByID1002")).click();
-        int a = driver.findElements(By.name("tech-id")).size();
-        driver.findElement(By.id("deltech222")).click();
-        int b = driver.findElements(By.name("tech-id")).size();
-        assertEquals(1, (a - b));
-
-        driver.findElement(By.id("addable222")).submit();
-
-
-        int c = driver.findElements(By.name("tech-id")).size();
-        assertEquals(1,(c-b));
-        */
+      
         open("http://localhost:8080/getallusers");
         $(By.id("SkillByID1002")).click();
         int a = $$(By.name("tech-id")).size();
