@@ -8,26 +8,7 @@ import java.util.Date;
  */
 public class Users
 {
-/*
-    public static void main(String[] args) {
-        Users userok = null;
-        Users usero4ek=null;
-        try {
-             userok = new Users(1033,"Furmanov","Dmitriy","USSR",new java.util.Date(1978,8,11),new java.util.Date(2014,4,1));
 
-             usero4ek = new Users(1034,"Furmanoff","Dimon","USSR",new SimpleDateFormat("yyyy.MM.dd").parse("1978.09.11"),
-                    new SimpleDateFormat("yyyy.MM.dd").parse("2014.05.01"));
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-
-
-        System.out.println(userok.toString());
-       System.out.println(usero4ek.toString());
-    }
-*/
     private int userId;
     private String userName;
     private String userSurname;
